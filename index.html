@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04060e">
+<title>SPOKIDI — локальный mp3-плеер в стиле Годжо</title>
+<meta name="description" content="SPOKIDI — локальный mp3-плеер для Windows и Android: плейлист, визуализатор, Domain Expansion и Discord Rich Presence. Без рекламы, аккаунтов и интернета.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true">
+  <span class="aurora-1"></span>
+  <span class="aurora-2"></span>
+  <span class="aurora-3"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" aria-label="SPOKIDI — наверх">
+    <span class="nav-logo" aria-hidden="true"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lgNav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#57c8ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><circle cx="24" cy="24" r="21" fill="none" stroke="url(#lgNav)" stroke-width="1.4" opacity=".7"/><path d="M16 31V17l8 7 8-7v14" fill="none" stroke="url(#lgNav)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.4" fill="#8ee7ff"/></svg></span>
+    <span class="nav-name">SPOKIDI</span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Разделы сайта">
+    <a href="#features">Возможности</a>
+    <a href="#demo">Демо</a>
+    <a href="#discord">Discord</a>
+    <a href="#install">Установка</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <a class="nav-cta" href="#download">Скачать</a>
+  <button class="nav-burger" id="navBurger" aria-label="Меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="chip" data-reveal><span class="chip-dot"></span> версия 1.0 · Windows и Android</p>
+        <h1 class="hero-title" data-reveal data-text="SPOKIDI">SPOKIDI</h1>
+        <p class="hero-lead" data-reveal>
+          Локальный mp3-плеер с интерфейсом Сатору Годжо.
+          Один файл, ноль рекламы, ноль аккаунтов — только твоя музыка.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn-primary" href="downloads/spokidi.exe" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span>Windows .exe<small>1,3 МБ</small></span>
+          </a>
+          <a class="btn btn-ghost" href="downloads/spokidi.apk" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.4"/><path d="M11 18.6h2"/></svg>
+            <span>Android .apk<small>145 КБ</small></span>
+          </a>
+          <a class="btn btn-link" href="app/index.html" target="_blank" rel="noopener">
+            открыть плеер в браузере <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <ul class="hero-meta" data-reveal>
+          <li>Windows 10/11</li>
+          <li>Android 7+</li>
+          <li>офлайн</li>
+          <li>без установки</li>
+        </ul>
+      </div>
+
+      <div class="hero-card-wrap" data-reveal>
+        <div class="hero-card" id="heroCard">
+          <img class="hero-portrait" src="assets/gojo.svg" alt="Стилизованный портрет Сатору Годжо">
+          <div class="hero-card-glow" aria-hidden="true"></div>
+          <div class="hero-card-top">
+            <span class="live"><i></i> слушает SPOKIDI</span>
+            <span class="ver">v1.0</span>
+          </div>
+          <div class="hero-card-bottom">
+            <p class="track">Болен (Slowed)</p>
+            <p class="artist">dope17 &amp; mapt0v</p>
+            <div class="bar" aria-hidden="true"><span></span></div>
+            <p class="time"><span>00:41</span><span>03:12</span></p>
+          </div>
+          <div class="hero-card-scan" aria-hidden="true"></div>
+        </div>
+        <p class="hero-card-note">∞ Limitless Audio · 領域展開</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>SATORU GOJO</span><i>∞</i><span>LIMITLESS AUDIO</span><i>∞</i><span>領域展開</span><i>∞</i>
+      <span>SPOKIDI</span><i>∞</i><span>無量空処</span><i>∞</i><span>LOCAL PLAYER</span><i>∞</i>
+      <span>SATORU GOJO</span><i>∞</i><span>LIMITLESS AUDIO</span><i>∞</i><span>領域展開</span><i>∞</i>
+      <span>SPOKIDI</span><i>∞</i><span>無量空処</span><i>∞</i><span>LOCAL PLAYER</span><i>∞</i>
+    </div>
+  </div>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">что внутри</p>
+        <h2>Не просто плеер, а техника</h2>
+        <p class="section-sub">Всё, что нужно для локальной музыки — и немного больше, чем нужно.</p>
+      </header>
+
+      <div class="features">
+        <article class="card" data-reveal>
+          <span class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg></span>
+          <h3>Плейлист не теряется</h3>
+          <p>Файлы хранятся внутри плеера: закрыл, открыл — треки и позиция на месте.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
+          <h3>Визуализатор на Web Audio</h3>
+          <p>Радиальный анализатор реагирует на бас и разгоняет ауру вокруг обложки.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 6.3L20.5 12l-6.3 2.2L12 21l-2.2-6.8L3.5 12l6.3-2.7z"/></svg></span>
+          <h3>Domain Expansion</h3>
+          <p>Полноэкранный туннель частиц с иероглифами 領域展開 / 無量空処. Клавиша D.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18a3 3 0 1 1-3-3h12M9 18V6l12-2v14"/><circle cx="18" cy="16" r="3"/></svg></span>
+          <h3>Статус в Discord</h3>
+          <p>Трек, исполнитель, полоса времени и обложка прямо в карточке профиля.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></svg></span>
+          <h3>Горячие клавиши</h3>
+          <p>Space, N/P, ←/→, M, S, R, D — управление без мыши, как положено.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3>Ноль интернета</h3>
+          <p>Ни телеметрии, ни загрузок, ни аккаунтов. Всё работает на твоём диске.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEMO ================= -->
+  <section class="section section-demo" id="demo">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">живое демо</p>
+        <h2>Потрогай интерфейс прямо здесь</h2>
+        <p class="section-sub">Это настоящий плеер, а не картинка. Плейлист в браузере может не сохраниться после перезагрузки — для этого есть приложение.</p>
+      </header>
+
+      <figure class="app-frame" data-reveal>
+        <div class="app-bar">
+          <span class="app-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="app-url">spokidi · player</span>
+          <a class="app-open" href="app/index.html" target="_blank" rel="noopener">открыть в новой вкладке ↗</a>
+        </div>
+        <div class="app-stage" id="appStage">
+          <iframe id="demoFrame" title="SPOKIDI — интерактивное демо плеера" loading="lazy"></iframe>
+          <button class="demo-start" id="demoStart" type="button">
+            <span class="demo-play" aria-hidden="true">▶</span>
+            <b>Включить демо</b>
+            <small>загрузится настоящий плеер · можно добавить свой mp3</small>
+          </button>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= DISCORD ================= -->
+  <section class="section" id="discord">
+    <div class="wrap discord-grid">
+      <div class="discord-copy" data-reveal>
+        <p class="eyebrow">интеграция</p>
+        <h2>Твой профиль слушает SPOKIDI</h2>
+        <p class="section-sub">Rich Presence показывает трек, исполнителя, время и обложку — как у больших плееров.</p>
+        <ol class="steps">
+          <li><span>01</span><div><b>Создай приложение</b><p>Developer Portal → New Application → SPOKIDI.</p></div></li>
+          <li><span>02</span><div><b>Вставь Application ID</b><p>В плеере: кнопка Discord → поле Application ID → Сохранить.</p></div></li>
+          <li><span>03</span><div><b>Загрузи обложку</b><p>Rich Presence → Art Assets → файл <code>spokidi-discord-art.png</code>, имя ассета <code>spokidi</code>.</p></div></li>
+          <li><span>04</span><div><b>Играй</b><p>Discord запущен — статус появится сам и будет обновляться.</p></div></li>
+        </ol>
+        <p class="note">ID — просто число, доступа к аккаунту он не даёт. На Android Discord-статус недоступен: там нет локального IPC.</p>
+      </div>
+      <figure class="shot" data-reveal>
+        <img src="assets/discord-profile.png" alt="Карточка профиля Discord с треком из SPOKIDI" loading="lazy">
+        <figcaption>Так это выглядит в профиле Discord</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= DOWNLOAD ================= -->
+  <section class="section" id="download">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">скачать</p>
+        <h2>Выбери свою платформу</h2>
+        <p class="section-sub">Оба файла лежат рядом с этим сайтом — ничего докачивать не нужно.</p>
+      </header>
+
+      <div class="dl-grid">
+        <article class="dl-card" data-reveal>
+          <span class="dl-os" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 5.5l8-1.1v7.1H3zM12.5 4.2L21 3v8.5h-8.5zM3 12.5h8v7L3 18.4zM12.5 12.5H21V21l-8.5-1.2z"/></svg>
+          </span>
+          <h3>SPOKIDI для Windows</h3>
+          <p class="dl-meta"><code>spokidi.exe</code> · 1,3 МБ · Windows 10/11 x64</p>
+          <ul class="dl-list">
+            <li>Один файл, установка не нужна</li>
+            <li>Discord Rich Presence с обложкой</li>
+            <li>Плейлист и настройки сохраняются</li>
+          </ul>
+          <a class="btn btn-primary wide" href="downloads/spokidi.exe" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span>Скачать .exe<small>Windows 10 / 11</small></span>
+          </a>
+        </article>
+
+        <article class="dl-card" data-reveal>
+          <span class="dl-os" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.4"/><path d="M11 18.6h2M9.6 5.2h4.8"/></svg>
+          </span>
+          <h3>SPOKIDI для Android</h3>
+          <p class="dl-meta"><code>spokidi.apk</code> · 145 КБ · Android 7+</p>
+          <ul class="dl-list">
+            <li>Тот же интерфейс в кармане</li>
+            <li>Плейлист хранится в приложении</li>
+            <li>Discord-статус недоступен на телефоне</li>
+          </ul>
+          <a class="btn btn-ghost wide" href="downloads/spokidi.apk" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.4"/><path d="M11 18.6h2"/></svg>
+            <span>Скачать .apk<small>Android 7 и новее</small></span>
+          </a>
+        </article>
+      </div>
+
+      <p class="fineprint" data-reveal>
+        Windows может показать SmartScreen: «Подробнее» → «Выполнить всё равно» — файл не подписан сертификатом.
+        Android попросит разрешить установку из неизвестного источника.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= INSTALL ================= -->
+  <section class="section" id="install">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">запуск</p>
+        <h2>Три шага — и играет</h2>
+      </header>
+      <div class="install-grid">
+        <div class="install-col" data-reveal>
+          <h3>Windows</h3>
+          <ol class="num">
+            <li><span>1</span>Скачай <code>spokidi.exe</code> из блока выше.</li>
+            <li><span>2</span>Запусти файл — можно прямо с рабочего стола.</li>
+            <li><span>3</span>Нажми <b>＋</b> или перетащи mp3 в окно.</li>
+          </ol>
+        </div>
+        <div class="install-col" data-reveal>
+          <h3>Android</h3>
+          <ol class="num">
+            <li><span>1</span>Перекинь <code>spokidi.apk</code> на телефон.</li>
+            <li><span>2</span>Открой файл и разреши установку.</li>
+            <li><span>3</span>Запусти и выбери музыку кнопкой «＋».</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">вопросы</p>
+        <h2>Коротко о важном</h2>
+      </header>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Это безопасно?</summary>
+          <p>Да: плеер не ходит в сеть, не ставит службы и не просит аккаунт. Вся музыка и настройки — локально. Исходники рядом с сайтом, в папке проекта.</p>
+        </details>
+        <details>
+          <summary>Почему Windows ругается на файл?</summary>
+          <p>У exe нет платной подписи разработчика, поэтому SmartScreen показывает предупреждение. Нажми «Подробнее» → «Выполнить всё равно».</p>
+        </details>
+        <details>
+          <summary>Почему в браузере плейлист может пропасть?</summary>
+          <p>Браузер может очистить локальное хранилище страницы — например, при очистке данных или в приватном окне. В <code>spokidi.exe</code> и в Android-версии плейлист лежит внутри приложения и перезапуск переживает.</p>
+        </details>
+        <details>
+          <summary>Можно свою картинку Годжо?</summary>
+          <p>Да. Положи <code>gojo.png</code> рядом с <code>spokidi.exe</code> — портрет заменится при запуске.</p>
+        </details>
+        <details>
+          <summary>А на телефоне будет статус в Discord?</summary>
+          <p>Нет. Мобильный Discord не принимает локальные подключения, поэтому кнопка Discord в Android-версии скрыта.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.svg" alt="" width="34" height="34">
+      <div>
+        <b>SPOKIDI</b>
+        <span>локальный плеер · 2026</span>
+      </div>
+    </div>
+    <p class="footer-note">Сделано для себя и друзей. Никакой телеметрии — только музыка.</p>
+    <div class="footer-links">
+      <a href="app/index.html" target="_blank" rel="noopener">Плеер ↗</a>
+      <a href="#download">Скачать</a>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
